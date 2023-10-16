@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | WeTour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon"  href="/WeTour__1_-removebg-preview-removebg-preview.png"   >
+    <style>
+        .box-outer{
+            border: 1px solid #ccc;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-bottom: 1rem;
+            margin-top: 180px;
+            padding:70px;
+            border-radius: 12px;
+            outline: solid 1px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            text-align: center;
+            width: 50%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 5px 10px 20px;
+            
+        }
+        .heading{
+            margin-right: 50px; 
+        }
+        .input-control{
+            transition: border .1s linear 0s, box-shadow .1s, width .25s, color .2s;
+            border: 1px solid #000000;
+            
+            display: block;
+            padding: .375rem .75rem;
+            font-size: .969rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #ffffff;
+           
+            background-clip: padding-box;
+            appearance: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            background-color: rgba(9, 9, 9, 0.5);
+            margin-left:10px ;
+
+        }
+        .input-control:focus{
+            border-color: #ffffff;
+            box-shadow: 0px 0px 10px rgb(255, 255, 254) ;
+            color: white;
+            
+        }
+        .button{
+            color:#FFFFFF;
+            box-shadow: 0 1px 3px rgba(241, 114, 3, 0.1),0 1px 0 rgb(0 0 0 / 2%);
+            background: linear-gradient(#b66918,#d1ac27);
+            border: none;
+            margin: 10px;
+            padding: .5rem;
+            border-radius: .12rem;
+            transition: background 0.2s ease;
+            padding: 1rem 2rem;
+        }
+        .button:hover{
+            transition: background 1s ease-in-out;
+            background: linear-gradient(#d1ac27, #b66918);
+        }
+        .button:focus{
+            background: linear-gradient(#5EA534,#519327);
+            transition: 0.5s;
+        }
+        .tandc{
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            margin-top: 20px;
+            background-color: #fffefe;
+            outline: solid 1px rgb(155, 146, 146);
+            border-radius: 30px;
+            background: transparent;
+            
+            color: rgb(211, 206, 206);
+        }
+        .tandc a{
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+        body{
+            background-image:url(https://wallpapercave.com/wp/wp4069456.jpg);
+            background-size:cover;
+            font-family: 'Montserrat',sans-serif;
+            background-repeat: no-repeat;
+        }
+        .overlay{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 5 ;
+            backdrop-filter: blur(3px);
+            flex-direction: column;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            color:#ffffff ;
+            opacity: 80%;
+        }
+    </style>
+    <script>
+        function validation(){
+            let pd=document.forms["myform"]["password"].value;
+            if(pd.length<8 || pd.length>15){
+                alert("The password length must be greater than 8 and less than 15");
+                return false;
+            }
+            let pattern =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W\_])[a-zA-Z0-9\W\_]$/;
+            if(!pattern.test(pd)){
+                alert("Password doesnot meet the requirements");
+                return false;
+            }
+            return true;
+        }
+       
+        var pwd = document.getElementById('pwd');
+        var chk =document.getElementById("chk");
+        chk.onchange = function(e){
+            pwd.type = chk.checked ? "text" : "password";
+        };
+    
+    </script>
+</head>
+<body>
+    <div id="section1">
+    <div class="overlay">
+        <div class="box-outer">
+            <h2 class="heading"> <a href="/Mian/index.html"><img src="/WeTour__2_-removebg.png" width="300px" alt=""></a></h2>
+            <form action="" name="myform" onsubmit="return validation();">
+                
+                <label for="fname" >First Name  </label>
+                <input type="text" name="fname" placeholder="Enter your FirstName" class="input-control">
+                <label for="lname">Last Name </label>
+                <input type="text" name="lname" placeholder="Enter your LastName" class="input-control">
+                <label for="email">Email </label>
+                <input type="email" name="emailid" placeholder="Enter Your Email Id" class="input-control">
+                
+                <label for="pwd">Password </label>
+                <input type="password" name="password" placeholder="Enter Your Password" class="input-control" id="pwd">
+                
+                <input type="submit" name="submit" value="SignUp now for FREE!" class="button">
+            </form>
+           
+        </div>
+        <div class="tandc">By clicking Sign Up, you are indicating that you have read and agreed to the <a href="#" target="_blank"><u> Terms of Use </u></a> and <a href="#" target="_blank"><u> Privacy Policy </u></a>.</div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Main//LoginpageS.css">
+    <link rel="icon"  href="/WeTour__1_-removebg-preview-removebg-preview.png"   >
+    <title>Login | WeTour</title>
+</head>
+<body >
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="log">
+            <form >
+                <h3><a href="/Main/index.html"><img src="/WeTour__2_-removebg.png" alt="" width="250px"></a></h3>
+                <div class="align">
+                    <p class="xn" >Email    : <input type="email" name="username" class="entry"></p>
+                    <p >Password : <input type="password" name="password" id="pwd"  class="entry"></p>
+                    <input type="checkbox" id="chk"> Show Password
+                </div>
+            
+                <button type="submit" class="btn">Lets Tour!
+                </button>
+            </form>
+            <p class="dc">Don't Have an account yet?<a href="/Main/" class="dc">Create now!</a></p>
+        </div>
+    </div>
+    <script>
+        var pwd = document.getElementById('pwd');
+        var chk =document.getElementById("chk");
+        chk.onchange = function(e){
+            pwd.type = chk.checked ? "text" : "password";
+        };
+    </script>
+   
+</body>
+</html>

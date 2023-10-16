@@ -1,0 +1,28 @@
+.img1 {
+    background:url(cover.jpg) left top no-repeat;
+    box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset; 
+    width: 1000px;
+    height: 300px;
+    }
+
+.img2{
+    width: 250px;
+    height: 300px;
+}
+
+.h1 {
+    margin-top: 60px;
+    font-size: 40px;
+    font-style: oblique;
+    color: black;
+}
+
+.bg {
+    background-color: bisque;
+}
+
+.bg1 {
+    background-color: brown;
+    width: auto;
+    height: fit-content;
+}
